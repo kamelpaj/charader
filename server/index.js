@@ -1,7 +1,7 @@
 import express from 'express';
 import socketio from 'socket.io';
 import http from 'http';
-import { addUser, removeUser, getUser, GetUsersInRoom } from './users'
+import { addUser, removeUser, getUser, getUsersInRoom } from './users'
 import router from './router';
 
 const PORT = process.env.PORT || 5000;
