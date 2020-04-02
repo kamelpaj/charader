@@ -1,1 +1,3 @@
 # charader
+Play charades online with your friends!
+Work in progress...
