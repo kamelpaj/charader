@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const JoinContainer = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+`;
 
 const Join = () => {
     const [name, setName] = useState('');
@@ -8,15 +15,15 @@ const Join = () => {
 
     console.log(name)
     return (
-        <div>
-            <h1>Join</h1>
-            <div><input placeholder="Name" type="text" onChange={(event) => setName(event.target.value)}></input></div>
+        <JoinContainer>
+            <h1>Enter a room to play charader!</h1>
+            <div><input placeholder="Nickname" type="text" onChange={(event) => setName(event.target.value)}></input></div>
             <div><input placeholder="Room" type="text" onChange={(event) => setRoom(event.target.value)}></input></div>
 
             <Link onClick={event => (!name || !room) ? event.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
-                <button type="submit">Join Room</button>
+                <button type="submit">Join room</button>
             </Link>
-        </div>
+        </JoinContainer>
     );
 };
 

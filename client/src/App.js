@@ -1,15 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Join from './components/Join/Join';
-import Chat from './components/Chat/Chat';
+import Room from './components/Room/Room';
+
+const AppContainer = styled.div`
+  font-family: 'Inter UI', sans-serif;
+`;
 
 const App = () => (
-    <Router>
-        <Route path="/" exact component={Join} />
-        <Route path="/chat" exact component={Chat} />
-    </Router>
+    <AppContainer>
+        <Router>
+            <Route path="/" exact component={Join} />
+            <Route path="/chat" exact component={Room} />
+        </Router>
+    </AppContainer>
 );
 
 export default App;

@@ -1,8 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const InputContainer = styled.div`
+    position: absolute;
+    bottom: 0;
+`;
 
 const Input = ({ message, setMessage, sendMessage }) => {
     return (
-        <div>
+        <InputContainer>
             <form>
                 <input 
                     type="text" 
@@ -13,7 +19,7 @@ const Input = ({ message, setMessage, sendMessage }) => {
                 
                 <button onClick={(event) => sendMessage(event)}> Send </button>
             </form>
-        </div>
+        </InputContainer>
     )
 };
 
