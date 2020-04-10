@@ -22,9 +22,14 @@ const RoomContainer = styled.div`
         "sidebar main aside";
     background-color: #fff;
     width: 98%;
-    margin: auto;
+    height: 95%;
     box-shadow: 0 5px 20px -5px rgba(50,50,93,.12), 0 3px 4px -2px rgba(0,0,0,.3);
     border-radius: 5px;
+  /* Middle of screen */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 `;
 
 const ChatContainer = styled.div`
