@@ -15,7 +15,7 @@ const RoomContainer = styled.div`
     display: grid;
     grid-gap: 0.5rem;
     grid-template-columns: 1.5fr 8fr 3fr;
-    grid-template-rows: 1fr 7fr 2fr;
+    grid-template-rows: 1.5fr 7fr 2fr;
     grid-template-areas:
         "header header header"
         "sidebar main aside"
@@ -34,8 +34,6 @@ const RoomContainer = styled.div`
 
 const ChatContainer = styled.div`
     grid-area: aside;
-    background-color: #85144b;
-    position: relative;
 `;
 
 

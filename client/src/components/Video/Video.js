@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const VideoContainer = styled.div`
     grid-area: main;
-    background-color: #FF4136;
+    background-color: #fab1a0;
 `;
 
 const Video = () => {

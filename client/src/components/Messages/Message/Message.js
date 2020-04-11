@@ -2,7 +2,11 @@ import React from 'react';
 import ReactEmoji from 'react-emoji';
 import styled from 'styled-components';
 
-
+const MessageBox = styled.div`
+    width: 98%;
+    padding: 5px 0px 3px 4px;
+    background-color: ${props => props.backgroundColor};
+`;
 
 
 const Message = ({ message: {user, text}, name }) => {
@@ -17,20 +21,14 @@ const Message = ({ message: {user, text}, name }) => {
     return (
         isSentByCurrentUser
         ? (
-            <div>
-                <p> {trimmedName} </p>
-                <div>
-                    <p> {ReactEmoji.emojify(text)} </p>
-                </div>
-            </div>
+            <MessageBox backgroundColor={'rgba(250, 177, 160, 0.2)'}>
+                <strong> {trimmedName}: </strong> {ReactEmoji.emojify(text)}
+            </MessageBox>
         ) :
         (
-            <div>
-              <div>
-                <p> {ReactEmoji.emojify(text)} </p>
-            </div>
-                <p> {user} </p>
-        </div>
+            <MessageBox>
+                <strong> {user}: </strong> {ReactEmoji.emojify(text)}
+            </MessageBox>
         ) 
     )
 }
