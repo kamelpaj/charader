@@ -12,8 +12,8 @@ const BackLink = styled.a`
     transition: all .15s ease-out;
 
     &:hover {
-        background-color: rgba(250, 177, 160, 0.2);
         cursor: pointer;
+        text-decoration: underline;
     }
 `;
 
